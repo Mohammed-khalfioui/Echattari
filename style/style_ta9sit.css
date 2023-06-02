@@ -1,0 +1,339 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+section {
+   
+  display: flex;
+  flex-wrap: wrap;
+ 
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  width: calc(100% - 78px );
+  transition: all 0.5s ease;
+  z-index: 3;
+  left:0;
+  
+
+}
+.sidebar{
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+
+.sidebar .logo-details{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+    
+}
+
+.sidebar .logo-details .icons .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+  color:#11101D;
+   font-size: 30px;
+   margin-top: px;
+
+}
+.sidebar .logo-details .icons .icon1{
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s ease;
+    color:#00a8e8;
+    position: absolute;
+    font-size: 50px;
+  }
+.sidebar .logo-details .logo_name{
+  color:#00a8e8;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon1,
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  
+}
+.sidebar.open .logo-details #btn{
+  text-align: left;
+  
+}
+.sidebar i{
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+.sidebar .nav-list{
+  margin-top: 2px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 2px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  right: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+
+
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+    background: #FFF;
+  }
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  right: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+  margin-right:10px
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+/* {
+    margin: 0;
+    padding:0;
+}
+nav li{
+    display: none;
+}
+.img_profile{
+    width: 60px;
+    height: 60px;
+}
+.logo{
+    display: flex;
+}
+.logo h2{
+    margin-right: 15px;
+}
+.icon_menu{
+    cursor: pointer;
+}
+.var_menu{
+    
+} */
+
+
+.table_calcu {
+	background-color: #ffffff;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+ 
+}
+input[readonly] {
+	text-align: right;
+}
+
+input[type="button"] {
+	padding: 0.2em;
+}
+
+.mainbutton {
+	width: 100px;
+    height: 80px;
+    margin: 5px;
+}
+
+/* Select only the "op" buttons, on the right column. */
+input:not(.mainbutton):not([type="text"]) {
+	width: 25px;
+  
+  
+}
+
+.table .th{
+    background-color:DodgerBlue;
+    border:1px solid black;
+    color: #FFF;    
+}
+.table .td{
+    border:1px solid black;
+    text-align: center;    
+}
+
+.divInput .input{
+  position: absolute;
+  right: 0;
+ 
+  background-color: rgb(111, 142, 32);
+}
+.h1{
+  
+  text-align: center;
+  background-color: #000000;
+  color: #FFF;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  height: 50px;
+ 
+}
+
+
+ 
+ .button:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ .button:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ .button:disabled {
+  cursor: auto;
+  color: grey;
+ }
+

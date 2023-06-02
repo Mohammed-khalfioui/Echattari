@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background: #013062; */
+            
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 65, 65, 0.744);
+    z-index: -1;
+}
+/*------------ Login container ------------*/
+.box-area{
+    width: 930px;
+}
+/*------------ Right box ------------*/
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+h2{
+    
+    color: rgb(210, 153, 46);
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 600;
+    font-size:30px;
+}
+p{
+    
+    color: rgb(7, 153, 211);
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 600;
+    font-size:18px;
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px){
+    .box-area{
+        margin: 0 10px;
+     }
+    .left-box{
+        height: 100px;
+        overflow: hidden;
+        
+     }
+    .right-box{
+        padding: 20px;
+     }
+    .row{
+        text-align: right;
+    }
+    
+}
+
+
